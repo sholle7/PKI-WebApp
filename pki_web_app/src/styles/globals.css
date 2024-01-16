@@ -3,11 +3,62 @@
 @tailwind utilities;
 
 :root {
-
+  --buttonColor: #0800FF; 
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.homepage {
+  background-image: url('../../public/assets/BackgroundWeb.png');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.buttonsForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-column: 3; 
+  grid-row: 2;
+}
+
+.logo {
+  background-image: url('../../public/assets/LogoWeb.png');
+  background-size: cover;
+  background-position: center center;
+  grid-column: 3; 
+  grid-row: 1;
+}
+
+h5 span {
+  background-color: white;
+  padding: 0 10px;
+}
+
+#divider {
+  width: 80%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  line-height: 0.1em;
+  color: black;
+  margin: 30px auto 30px auto;
+}
+
+.loginButton {
+  width: 80%;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid var(--buttonColor);
+  background: var(--buttonColor);
 }
