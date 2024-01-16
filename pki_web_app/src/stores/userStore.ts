@@ -7,8 +7,11 @@ export class UserStore {
     loggedUser: User | null = null;
 
     constructor (){
-        this.isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-        this.loggedUser = JSON.parse(localStorage.getItem("user")!);
+        const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
+        this.isLoggedIn = storedIsLoggedIn === "true";
+    
+        const storedUser = localStorage.getItem("user");
+        this.loggedUser = storedUser ? JSON.parse(storedUser) : null;
         makeAutoObservable(this);
     }
 
