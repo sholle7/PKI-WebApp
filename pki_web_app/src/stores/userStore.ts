@@ -1,5 +1,7 @@
+"use client"
 import { User } from "@/models/User";
 import { makeAutoObservable } from "mobx";
+import { users } from '@/database/database'
 
 export class UserStore {
     
@@ -7,38 +9,36 @@ export class UserStore {
     loggedUser: User | null = null;
 
     constructor (){
-        const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
-        this.isLoggedIn = storedIsLoggedIn === "true";
-    
-        const storedUser = localStorage.getItem("user");
-        this.loggedUser = storedUser ? JSON.parse(storedUser) : null;
-        makeAutoObservable(this);
+        console.log("Da")
+        if (typeof window !== 'undefined') {
+            console.log("Da2")
+            const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
+            this.isLoggedIn = storedIsLoggedIn === "true";
+        
+            const storedUser = localStorage.getItem("user");
+            this.loggedUser = storedUser ? JSON.parse(storedUser) : null;
+            makeAutoObservable(this);
+        }
     }
 
     get isUserLoggedIn(): boolean{
         return this.isLoggedIn;
     }
 
-    login = async (user: User) => {
+    login = (username: string, password: string) => {
         try {           
+            users.forEach(user => {
+                if(user.username == username && user.password == password) {
+                  this.isLoggedIn = true
+                  this.loggedUser = user
+                }          
+              });
+          
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('user', JSON.stringify(this.loggedUser));
 
-            // const loggedUser: User | null = await agent.UserApi.login(user);
-    
-            // if (loggedUser !== null) {
+            return true
 
-            //     this.isLoggedIn = true;
-            //     this.loggedUser = loggedUser;
-
-            //     localStorage.setItem('isLoggedIn', 'true');
-            //     localStorage.setItem('user', JSON.stringify(loggedUser));
-
-            //     router.navigate("/mainPage");
-            //     return true;
-            // } 
-
-            // else {
-            //     return false;
-            // }
         } catch (error) {
             return false;
         }
@@ -50,8 +50,6 @@ export class UserStore {
 
         localStorage.removeItem('isLoggedIn');
         localStorage.removeItem('user');
-
-        //router.navigate("/");
     }
 
 

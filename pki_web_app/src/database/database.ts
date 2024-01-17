@@ -6,7 +6,7 @@ export let users: User[] = [
         lastName: 'Petrović',
         contactNumber: '0612345678',
         address: 'Knez Mihailova 1, Beograd',
-        username: 'jovan.petrovic',
+        username: 'jovan',
         password: 'sifra123',
         role: Roles.buyer
       },

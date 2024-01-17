@@ -1,9 +1,15 @@
 "use client"
+import { useStores } from '@/stores/useStores';
 import React, { useState } from 'react';
+import { users } from '@/database/database'
+import { Roles } from '@/models/User';
+import { useRouter } from 'next/navigation';
 
 const LoginBuyer = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const { userStore } = useStores();
+  const router = useRouter();
 
   const handleUsernameChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setUsername(event.target.value);
@@ -16,7 +22,13 @@ const LoginBuyer = () => {
   const handleSubmit = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
-    // handle login
+    users.forEach(user => {
+      if(user.username == username && user.password == password && user.role == Roles.buyer) {
+        userStore.login(username, password)
+        router.push("/buyerHomepage");
+      }
+
+    });
 
     setUsername('');
     setPassword('');
