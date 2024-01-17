@@ -9,9 +9,7 @@ export class UserStore {
     loggedUser: User | null = null;
 
     constructor (){
-        console.log("Da")
         if (typeof window !== 'undefined') {
-            console.log("Da2")
             const storedIsLoggedIn = localStorage.getItem("isLoggedIn");
             this.isLoggedIn = storedIsLoggedIn === "true";
         
