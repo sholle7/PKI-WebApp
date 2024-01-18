@@ -15,7 +15,7 @@ export let users: User[] = [
         lastName: 'Janković',
         contactNumber: '0649876543',
         address: 'Terazije 5, Novi Sad',
-        username: 'ana.jankovic',
+        username: 'ana',
         password: 'lozinka456',
         role: Roles.employee
       },
@@ -24,7 +24,7 @@ export let users: User[] = [
         lastName: 'Nikolić',
         contactNumber: '0655555555',
         address: 'Nemanjina 10, Niš',
-        username: 'marko.nikolic',
+        username: 'marko',
         password: 'bezbednaLozinka789',
         role: Roles.buyer
       }
