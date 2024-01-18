@@ -25,7 +25,7 @@ const LoginBuyer = () => {
     users.forEach(user => {
       if(user.username == username && user.password == password && user.role == Roles.buyer) {
         userStore.login(username, password)
-        router.push("/buyerHomepage");
+        router.push("/buyerPromotions");
       }
 
     });

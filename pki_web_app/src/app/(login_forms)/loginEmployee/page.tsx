@@ -25,7 +25,7 @@ const loginEmployee = () => {
     users.forEach(user => {
       if(user.username == username && user.password == password && user.role == Roles.employee) {
         userStore.login(username, password)
-        router.push("/buyerHomepage");
+        router.push("/employeeHomepage");
       }
 
     });
