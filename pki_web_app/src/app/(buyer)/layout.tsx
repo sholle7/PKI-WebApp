@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../../styles/globals.css'
-import Navbar from '@/components/Navbar'
+import NavbarBuyer from '@/components/NavbarBuyer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +17,7 @@ export default function BuyerLayoyt({
 }) {
   return (
       <div>
-        <Navbar />
+        <NavbarBuyer />
         {children}
       </div>
   )
