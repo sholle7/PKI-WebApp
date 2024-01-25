@@ -46,6 +46,7 @@ const loginEmployee = () => {
           <input
             type='text'
             value={username}
+            placeholder='Unesite korisinicko ime'
             onChange={handleUsernameChange}
             required
           />
@@ -55,13 +56,14 @@ const loginEmployee = () => {
           Lozinka:
           <input
             type='password'
+            placeholder='Unesite lozinku'
             value={password}
             onChange={handlePasswordChange}
             required
           />
         </label>
 
-        <button type='submit'>Prijavi se</button>
+        <button className='submitButton' type='submit'>Prijavi se</button>
       </form>
     </div>
   );

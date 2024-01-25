@@ -23,9 +23,17 @@
   gap: 10px;
 }
 
-.buttonsForm, .loginForm {
+.buttonsForm {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-column: 3; 
+  grid-row: 2;
+}
+
+.loginForm {
+  display: flex;
   justify-content: center;
   flex-direction: column;
   grid-column: 3; 
@@ -63,7 +71,16 @@ h5 span {
   background: var(--buttonColor);
 }
 
-input[type=text], select {
+.submitButton {
+  background-color: #21947E;
+  width: 50%;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -75,12 +92,11 @@ input[type=text], select {
 
 input[type=text], input[type=password] {
   width: 100%;
-  background-color: #4CAF50;
-  color: white;
+  color: black;
   padding: 14px 20px;
+  border: 2px solid black;
   margin: 8px 0;
-  border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
