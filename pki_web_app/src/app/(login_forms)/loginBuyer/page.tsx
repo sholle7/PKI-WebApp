@@ -41,27 +41,31 @@ const LoginBuyer = () => {
       </div>
 
       <form onSubmit={handleSubmit} className='loginForm'>
-          <label>
-            Korisničko ime:
+         <div className='inputWrapper'>
+            <label>
+              Korisničko ime:
+              <input
+                type='text'
+                value={username}
+                placeholder='Unesite korisinicko ime'
+                onChange={handleUsernameChange}
+                required
+              />
+            </label>
+          </div>
+
+          <div className='inputWrapper'>
+            <label>
+            Lozinka:
             <input
-              type='text'
-              value={username}
-              placeholder='Unesite korisinicko ime'
-              onChange={handleUsernameChange}
+              type='password'
+              placeholder='Unesite lozinku'
+              value={password}
+              onChange={handlePasswordChange}
               required
             />
           </label>
-
-          <label>
-          Lozinka:
-          <input
-            type='password'
-            placeholder='Unesite lozinku'
-            value={password}
-            onChange={handlePasswordChange}
-            required
-          />
-        </label>
+          </div>
 
         <button className='submitButton' type='submit'>Prijavi se</button>
       </form>

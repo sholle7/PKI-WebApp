@@ -41,27 +41,31 @@ const loginEmployee = () => {
       </div>
 
       <form onSubmit={handleSubmit} className='loginForm'>
-        <label>
-          Korisničko ime:
-          <input
-            type='text'
-            value={username}
-            placeholder='Unesite korisinicko ime'
-            onChange={handleUsernameChange}
-            required
-          />
-        </label>
+        <div className='inputWrapper'>
+          <label>
+            Korisničko ime:
+            <input
+              type='text'
+              value={username}
+              placeholder='Unesite korisinicko ime'
+              onChange={handleUsernameChange}
+              required
+            />
+          </label>
+        </div>
 
-        <label>
-          Lozinka:
-          <input
-            type='password'
-            placeholder='Unesite lozinku'
-            value={password}
-            onChange={handlePasswordChange}
-            required
-          />
-        </label>
+        <div className='inputWrapper'>
+          <label>
+            Lozinka:
+            <input
+              type='password'
+              placeholder='Unesite lozinku'
+              value={password}
+              onChange={handlePasswordChange}
+              required
+            />
+          </label>
+        </div>
 
         <button className='submitButton' type='submit'>Prijavi se</button>
       </form>

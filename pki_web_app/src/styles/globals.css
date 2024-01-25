@@ -35,6 +35,7 @@
 .loginForm {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   grid-column: 3; 
   grid-row: 2;
@@ -95,9 +96,14 @@ input[type=text], input[type=password] {
   color: black;
   padding: 14px 20px;
   border: 2px solid black;
-  margin: 8px 0;
+  margin-left: 0px;
+  margin-right: 10px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.inputWrapper {
+  width: 70%;
 }
 
 input[type=submit]:hover {
