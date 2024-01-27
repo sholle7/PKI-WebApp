@@ -4,6 +4,7 @@ export enum Roles {
 }
 
 export class User {
+    id: number
     firstName: string
     lastName: string
     contactNumber: string
@@ -12,7 +13,8 @@ export class User {
     password: string;
     role: Roles;
 
-    constructor(firstName: string, lastName: string, contactNumber: string, address: string, username: string, password: string, role: Roles) {
+    constructor(id: number, firstName: string, lastName: string, contactNumber: string, address: string, username: string, password: string, role: Roles) {
+      this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
       this.contactNumber = contactNumber;
@@ -21,4 +23,4 @@ export class User {
       this.password = password;
       this.role = role
     }
-  }
+}
