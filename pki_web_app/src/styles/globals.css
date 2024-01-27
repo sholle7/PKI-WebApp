@@ -143,3 +143,38 @@ input[type=submit]:hover {
   top: 50%;
   right: 30%;
 }
+
+.mainContainerContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactContainer {
+  background-color: #754949;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 600px;
+  width: 1000px;
+  margin-top: 5%;
+}
+
+.firstColumnContact {
+  flex: 1;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.secondColumnContact {
+  flex: 1;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
