@@ -113,3 +113,33 @@ input[type=submit]:hover {
 .navLink:hover {
   color:#F14646 !important;
 }
+
+.productsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.productsWrapper h1 {
+  margin-bottom: 30px;
+  font-size: 3em;
+}
+
+.descriptionWrapper {
+  margin-top: 30px;
+  width: 20vw;
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+.rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 30%;
+}
