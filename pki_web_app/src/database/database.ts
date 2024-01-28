@@ -168,6 +168,18 @@ export let users: User[] = [
       userId: 1,
       status: true,
       text: "Vasa narudzbina sa id 1 je uspesno prihvacena"
+    },
+    {
+      date: new Date(),
+      userId: 1,
+      status: false,
+      text: "Vasa narudzbina sa id 2 nije uspesno prihvacena"
+    },
+    {
+      date: new Date(),
+      userId: 1,
+      status: true,
+      text: "Vasa narudzbina sa id 3 je uspesno prihvacena"
     }
   ]
 

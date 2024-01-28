@@ -288,10 +288,6 @@ input[type=submit]:hover {
   align-items: center;
 }
 
-.singleProductSecondColumn {
-
-}
-
 .allComentsForProduct {
   display: flex;
   flex-direction: column;
@@ -311,4 +307,39 @@ input[type=submit]:hover {
 
 .newComment {
   margin-top: 100px;
+}
+
+.notificationsContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+.notificationList {
+  list-style: none;
+  padding: 0;
+  width: 100vw;
+}
+
+.notificationList li {
+  display: flex;
+}
+
+.notificationList li div {
+  flex: 1;
+  font-size: 1.5em;
+  height: 70px;
+}
+
+.notificationList li div p {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.notificationItem {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }

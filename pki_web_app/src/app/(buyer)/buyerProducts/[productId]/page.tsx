@@ -90,7 +90,7 @@ const SingleBuyerProduct = observer(() => {
             <div className='singleProductSecondColumn'>
                 <h1 style={{textAlign: "center"}}>Komentari</h1>
                 <div className='allComentsForProduct'>
-                    {comments && comments.map((comment, index) => (
+                    {productComments && comments.map((comment, index) => (
                         <div className='commentsWrapper' key={index}>
                             <label>
                                 {users.find(user => user.id == comment.userId)?.username}
