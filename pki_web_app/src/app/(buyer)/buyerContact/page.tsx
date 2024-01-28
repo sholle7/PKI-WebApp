@@ -12,7 +12,7 @@ const BuyerContact = () => {
             Email Adresa:
           </div>
           <div>
-            Radno vreme
+            Radno vreme:
           </div>
         </div>
         
