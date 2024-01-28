@@ -12,6 +12,18 @@
   padding: 0;
 }
 
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+img {
+  display: inline-block;
+}
+
 .homepage {
   background-image: url('../../public/assets/BackgroundWeb.png');
   width: 100vw;
@@ -194,4 +206,109 @@ input[type=submit]:hover {
 .profileContainer h1 {
   margin-bottom: 30px;
   font-size: 2.5em;
+}
+
+.buyerProductsContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.buyerProductsContainer div {
+  flex: 1;
+  text-align: center;
+}
+
+.cakeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pastryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.leftArrowCake {
+  position: absolute;
+  left: 10px
+}
+
+.rightArrowCake {
+  position: absolute;
+  right: 10px;
+}
+
+
+.leftArrowPastry {
+  position: absolute;
+  left: 10px
+}
+
+.rightArrowPastry {
+  position: absolute;
+  right: 10px;
+}
+
+.singleProductContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.singleProductContainer div {
+  flex: 1;
+}
+
+.singleProductFirstColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.svgCartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttonsContainer .cartButton {
+  width: 20vw;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleProductSecondColumn {
+
+}
+
+.allComentsForProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+.commentsWrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.newCommentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.newComment {
+  margin-top: 100px;
 }

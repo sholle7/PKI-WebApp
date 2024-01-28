@@ -1,7 +1,7 @@
 import { Product, Types } from "@/models/Product";
 import { User, Roles } from "@/models/User";
 import { Comment } from "@/models/Comment";
-
+import { Notification } from "@/models/Notification";
 import CakePopsKolac from "@/../public/assets/cakePopsKolac.jpg"
 import CokoladaKolac from "@/../public/assets/cokoladaKolac.jpg"
 import CokoladneBombice from "@/../public/assets/cokoladneBombiceKolac.jpg"
@@ -14,6 +14,8 @@ import ParfeTorta from "@/../public/assets/parfeTorta.jpg"
 import RafaeloTorta from "@/../public/assets/rafaeloTorta.jpg"
 import ReformaTorta from "@/../public/assets/reformaTorta.jpg"
 import VocnaTorta from "@/../public/assets/vocnaTorta.jpg"
+import { Cart } from "@/models/Cart";
+import { Order } from "@/models/Order";
 
 export let users: User[] = [
     {
@@ -53,6 +55,11 @@ export let users: User[] = [
       userId: 1,
       productId: 1,
       text: "Dobar"
+    },
+    {
+      userId: 2,
+      productId: 1,
+      text: "Super"
     }
   ]
 
@@ -155,3 +162,19 @@ export let users: User[] = [
     }
   ]
 
+  export let notifications: Notification[] = [
+    {
+      date: new Date(),
+      userId: 1,
+      status: true,
+      text: "Vasa narudzbina sa id 1 je uspesno prihvacena"
+    }
+  ]
+
+  export let carts: Cart[] = [
+
+  ]
+
+  export let orderd: Order[] = [
+    
+  ]
