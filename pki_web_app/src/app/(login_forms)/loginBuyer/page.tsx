@@ -27,7 +27,6 @@ const LoginBuyer = () => {
         userStore.login(username, password)
         router.push("/buyerPromotions");
       }
-
     });
 
     setUsername('');
