@@ -46,7 +46,7 @@ const SingleBuyerProduct = observer(() => {
             carts[userCartIndex].hashmapOfProducts.set(parseInt(productId), (carts[userCartIndex].hashmapOfProducts.get(product!.id) || 0) + numberOfElements);
         } 
         else {
-            const newCart = new Cart(userStore.loggedUser?.id ?? 0, new Map([[product!.id, numberOfElements]]));
+            const newCart = new Cart(carts.length + 1, userStore.loggedUser?.id ?? 0, new Map([[product!.id, numberOfElements]]));
             carts.push(newCart);
         }
 
@@ -70,7 +70,9 @@ const SingleBuyerProduct = observer(() => {
                     alt={product?.name}
                     style={{ maxWidth: '200px', maxHeight: '200px' }}
                 />
-
+                
+                <p style={{marginTop: "20px"}}>Cena: {product?.price} RSD</p>
+                
                 <div className='descriptionWrapper'>
                     <p>{product?.description}</p>
                 </div>

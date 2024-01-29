@@ -187,6 +187,6 @@ export let users: User[] = [
 
   ]
 
-  export let orderd: Order[] = [
+  export let orders: Order[] = [
     
   ]

@@ -327,7 +327,7 @@ input[type=submit]:hover {
 
 .notificationList li div {
   flex: 1;
-  font-size: 1.5em;
+  font-size: 1.4em;
   height: 70px;
 }
 
@@ -342,4 +342,44 @@ input[type=submit]:hover {
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
   padding-bottom: 10px;
+}
+
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 50vw;
+  margin: auto;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.cartContainer div {
+  width: 100%;
+  text-align: center;
+}
+
+#fullPrice {
+  text-align: right;
+}
+
+#dividerCart {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  line-height: 0.1em;
+  color: black;
+  margin: 30px auto 30px auto;
+}
+
+.productRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productRow > * {
+  flex: 1;
 }
