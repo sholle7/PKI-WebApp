@@ -323,6 +323,7 @@ input[type=submit]:hover {
 
 .notificationList li {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .notificationList li div {
@@ -384,6 +385,43 @@ input[type=submit]:hover {
   flex: 1;
 }
 
-.ordersContainer {
-  
+.orderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.orderList {
+  list-style: none;
+  padding: 0;
+  width: 100vw;
+
+}
+
+.orderList li {
+  margin-bottom: 10px;
+  height: 50px;
+  text-align: center;
+}
+
+.orderText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderText p{
+  font-size: 2em;
+  text-align: center;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }

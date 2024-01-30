@@ -38,8 +38,12 @@ const BuyerCart = observer(() => {
   const makeAnOrder = () => {
     const order = new Order(orders.length + 1, loggedUser?.id ?? 0, cart?.id ?? 0, null)
     orders.push(order)
-    cart?.hashmapOfProducts.clear();
+    
+    for (const [productId, quantity] of cart?.hashmapOfProducts || []) {
+      order.products.set(productId, quantity);
+    }
 
+    cart?.hashmapOfProducts.clear();
 
     const cartIndex = carts.findIndex(c => c.userId === loggedUser?.id);
     if (cartIndex !== -1) {

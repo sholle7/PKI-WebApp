@@ -16,12 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    
       <html lang="en">
         <StoreWrapper>
           <body className={inter.className}>{children}</body>
         </StoreWrapper>
       </html>
-    
   )
 }

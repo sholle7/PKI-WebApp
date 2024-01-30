@@ -25,7 +25,7 @@ export let users: User[] = [
         contactNumber: '0612345678',
         address: 'Knez Mihailova 1, Beograd',
         username: 'jovan',
-        password: 'sifra123',
+        password: '123',
         role: Roles.buyer
       },
       {
@@ -35,7 +35,7 @@ export let users: User[] = [
         contactNumber: '0649876543',
         address: 'Terazije 5, Novi Sad',
         username: 'ana',
-        password: 'lozinka456',
+        password: '456',
         role: Roles.employee
       },
       {
@@ -188,5 +188,5 @@ export let users: User[] = [
   ]
 
   export let orders: Order[] = [
-    
+
   ]

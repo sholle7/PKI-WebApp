@@ -6,7 +6,7 @@ import { useStores } from '@/stores/useStores'
 import { observer } from 'mobx-react'
 import React, { useEffect, useState } from 'react'
 
-const buyerNotifications = observer(() => {
+const BuyerNotifications = observer(() => {
   const { userStore } = useStores()
   const [allNotificaitonsForUser, setAllNotificationsForUser] = useState<Notification[] | null>(null)
   const [loggedUser, setLoggedUser] = useState<User | null>(null)
@@ -35,4 +35,4 @@ const buyerNotifications = observer(() => {
   )
 })
 
-export default buyerNotifications
+export default BuyerNotifications

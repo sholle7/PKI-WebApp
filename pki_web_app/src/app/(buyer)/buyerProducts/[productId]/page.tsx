@@ -28,7 +28,7 @@ const SingleBuyerProduct = observer(() => {
 
     const handleInputChange = (value: string) => {
        setNewComment(value)
-      };
+    };
     
     const handlePlusButton = () => {
         setNumberOfElements(numberOfElements + 1)
