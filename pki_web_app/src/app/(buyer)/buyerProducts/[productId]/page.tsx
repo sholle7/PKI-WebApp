@@ -68,7 +68,7 @@ const SingleBuyerProduct = observer(() => {
                 <img
                     src={product?.pictureURL}
                     alt={product?.name}
-                    style={{ maxWidth: '200px', maxHeight: '200px' }}
+                    style={{ width: '150px', height: '150px' }}
                 />
                 
                 <p style={{marginTop: "20px"}}>Cena: {product?.price} RSD</p>

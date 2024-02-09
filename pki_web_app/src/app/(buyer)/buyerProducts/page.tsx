@@ -53,7 +53,7 @@ const BuyerProducts = () => {
                     <img
                       src={productsCake[id].pictureURL}
                       alt={productsCake[id].name}
-                      style={{ maxWidth: '200px', maxHeight: '200px' }}
+                      style={{ width: '150px', height: '150px' }}
                     />
                   </Link>
                 </>
@@ -106,7 +106,7 @@ const BuyerProducts = () => {
                     <img
                       src={productsPastry[id].pictureURL}
                       alt={productsPastry[id].name}
-                      style={{ maxWidth: '200px', maxHeight: '200px' }}
+                      style={{ width: '150px', height: '150px' }}
                     />
                   </Link>
                 </>

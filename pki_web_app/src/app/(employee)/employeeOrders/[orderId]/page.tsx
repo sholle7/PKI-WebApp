@@ -82,7 +82,7 @@ const SingleOrder = () => {
             <img
               src={product.product.pictureURL}
               alt={product.product.name}
-              style={{ maxWidth: '100px', maxHeight: '100px' }}
+              style={{ width: '100px', height: '100px' }}
             />
             <p>X {product.quantity}</p>
             <p>{product.product.price * product.quantity} RSD</p>

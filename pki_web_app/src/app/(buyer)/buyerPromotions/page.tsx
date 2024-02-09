@@ -48,7 +48,7 @@ const BuyerPromotions = observer(() => {
             <img
                 src={products[productId].pictureURL}
                 alt={products[productId].name}
-                style={{ maxWidth: '200px', maxHeight: '200px' }}
+                style={{ width: '200px', height: '200px' }}
               />
 
               <div className='descriptionWrapper'>

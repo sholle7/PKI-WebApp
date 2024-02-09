@@ -65,7 +65,7 @@ const BuyerCart = observer(() => {
               {product && (
                 <div className='productRow'>
                   <p>{product.name}</p>
-                  <img src={product.pictureURL} alt={product.name} style={{ maxWidth: '100px', maxHeight: '100px' }} />
+                  <img src={product.pictureURL} alt={product.name} style={{ width: '100px', height: '100px' }} />
                   <p>X {quantity}</p>
                   <p>{product.price * quantity} RSD</p>
                 </div>
