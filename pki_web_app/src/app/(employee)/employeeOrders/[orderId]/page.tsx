@@ -7,7 +7,7 @@ import { Order } from '@/models/Order';
 import { Product } from '@/models/Product';
 import { User } from '@/models/User';
 import { useStores } from '@/stores/useStores';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const SingleOrder = () => {
   const { userStore } = useStores();
@@ -16,6 +16,7 @@ const SingleOrder = () => {
   const [fullPrice, setFullPrice] = useState(0);
   const [cart, setCart] = useState<Cart | undefined>(undefined);
   const [orderProducts, setOrderProducts] = useState<{ product: Product; quantity: number }[]>([]);
+  const router = useRouter();
   const pathname = usePathname();
   const pathSegments = pathname.split('/');
   const orderId = pathSegments[pathSegments.length - 1];
@@ -56,6 +57,7 @@ const SingleOrder = () => {
       true
     );
     notifications.push(newNotification);
+    router.back();
   };
 
   const rejectOrder = () => {
@@ -70,6 +72,7 @@ const SingleOrder = () => {
       true
     );
     notifications.push(newNotification);
+    router.back();
   };
 
   return (
