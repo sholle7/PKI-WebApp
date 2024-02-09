@@ -24,7 +24,7 @@ const SingleBuyerProduct = observer(() => {
         const loggedUser: User | null = JSON.parse(localStorage.getItem("user")!);
         setLoggedUser(loggedUser);
         setProductComments(comments?.filter(comment => comment.productId == parseInt(productId)))
-    }, []);
+    }, [comments.length]);
 
     const handleInputChange = (value: string) => {
        setNewComment(value)
@@ -68,7 +68,7 @@ const SingleBuyerProduct = observer(() => {
                 <img
                     src={product?.pictureURL}
                     alt={product?.name}
-                    style={{ width: '150px', height: '150px' }}
+                    style={{ width: '100px', height: '100px' }}
                 />
                 
                 <p style={{marginTop: "20px"}}>Cena: {product?.price} RSD</p>
